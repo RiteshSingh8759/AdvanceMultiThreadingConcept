@@ -13,10 +13,7 @@ public class WhyNotFuture
 	public static void main(String[] args) throws InterruptedException, ExecutionException 
 	{
 		ExecutorService service=Executors.newFixedThreadPool(10);
-		//it cannot be manually completed
-		// Multiple Futures cannot be chained together
-		// we can not combine multiple futures together
-		// No proper Exception Handling
+	
 		Future<List<Integer>> future1=service.submit(()->{
 			//u are doing Api call
 			System.out.println("Thread : "+Thread.currentThread().getName());		 
